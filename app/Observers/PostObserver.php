@@ -45,7 +45,7 @@ class PostObserver
     if ($users->isNotEmpty()) {
         Notification::make()
             ->title('Post Updated')
-            ->body("Post '{$post->title}' has been updated. <br> New Content: '{$post->content}'")
+            ->body("Post '{$post->title}' has been updated. <br> And his Content: '{$post->content}'")
             ->actions([
                 Action::make('View')
                     ->icon('heroicon-o-eye')
