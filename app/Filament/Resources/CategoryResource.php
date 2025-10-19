@@ -58,7 +58,7 @@ class CategoryResource extends Resource
                 TextColumn::make('name')->searchable()->sortable(),
                 TextColumn::make('slug')->searchable()->sortable(),
                 ColorColumn::make('color')->label('Color'),
-                TextColumn::make('description')->limit(50),
+                TextColumn::make('description')->limit(100),
                 TextColumn::make('created_at')
                     ->label('Created')
                     ->dateTime('d M Y'),
