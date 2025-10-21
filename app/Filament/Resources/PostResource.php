@@ -69,6 +69,8 @@ class PostResource extends Resource
                                 'php',
                                 'laravel',
                                 'javascript',
+                                'devops',
+                                'C++',
                             ]),
                             Select::make('category_id')->relationship('category', 'name')
                                 ->label('Category')
@@ -94,7 +96,7 @@ class PostResource extends Resource
                         ->label('Thumbnail')
                         ->getStateUsing(fn ($record) => $record->thumbnail ? asset('storage/' . $record->thumbnail) : null)
                         ->circular() // optional
-                        ->size(50)->toggleable(),
+                        ->size( 50)->toggleable(),
                 ToggleColumn::make('published')->toggleable(),
             ])
             ->filters([
