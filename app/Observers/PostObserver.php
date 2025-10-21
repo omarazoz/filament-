@@ -40,7 +40,7 @@ class PostObserver
      */
     public function updated(Post $post): void
     {
-        $users = User::first();
+        $users = User::all();
 
     if ($users->isNotEmpty()) {
         Notification::make()
